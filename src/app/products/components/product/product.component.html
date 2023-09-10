@@ -1,0 +1,16 @@
+        <div class="card border-50 border-primary item" routerLink="/details/{{data.id}}" >
+            <img class="card-img-top" [src]="data.image" >
+            <div class="card-body ">
+              <h5 class="card-title">{{data.title}}</h5>
+              <p class="card-text">{{data.description}}</p>
+              <p class="card-text">{{data.price}}| currency: 'EGP'</p>
+              <p class="card-text">{{data.category}}</p>
+              <span class="card-text">The remaining datas in stock are {{data.rating['count']}}</span>
+           
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="add()">Add to Cart</button>    
+            </div>
+            
+          </div>
+   

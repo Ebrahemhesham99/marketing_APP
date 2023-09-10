@@ -1,0 +1,12 @@
+<label for="categories" class="my-2 ms-5 fs-6">{{categories_title}}</label>
+<div class="row lg-gap-2 sm-gap-0 mb-3 mx-4">
+  <div class="col-md-3">
+    <div class="input-group mb-3">
+      <select
+        class="select col-md-11 rounded-start fs-6 form-select-left" (change)="filter($event)">
+      <option value="All" selected>All</option>
+        <option value="{{option}}" *ngFor="let option of data">{{option}}</option>
+      </select>
+    </div>
+  </div>
+</div>

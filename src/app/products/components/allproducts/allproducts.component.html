@@ -1,0 +1,13 @@
+<div class="my-2">
+   <app-select [data] ="categories" (selection) = "filtercat($event)"></app-select>
+  </div>
+<div><div class="row mx-3 py-3 ">
+  <div class="container col-md-3 col-sm-12 " *ngFor="let item of products"  >
+  <app-product [data]="item" (item)="addtocart($event)"></app-product>
+  </div>
+</div>
+
+  <div class="text-center w100">
+      <app-spinner></app-spinner>
+    </div>
+</div>
